@@ -1,0 +1,19 @@
+{
+  "KrishiToken": "0x41ef54662509D66715C237c6e1d025DBC6a9D8d1",
+  "CreditProtocol": "0x24EBB2B67801ae30E96B5dc8A18a5079548714Ae",
+  "CreditScoreOracle": "0x3FeEa5139E867543Ec8Ba2711fA30f58Ce808465",
+  "LoanContract": "0x25F20Ce49D6A1a1bf48B76417635E448e002412C",
+  "BatchNFT": "0x36f9d540B32f5b8F5962a3928c1f328d30b71189",
+  "SupplyChain": "0x2FDf116504b8FB172F6b98363a9047481f59dd8b",
+  "LoanVault": "0xb3c84011492b4126337798E53aE5e483FD2933A8",
+  "deployer": "0x2Cd3Dc01A7881C9115bCa9BeE1A1cc5105AB6B55",
+  "network": "sepolia",
+  "subscriptionId": "5758",
+  "timestamp": "2025-11-01T09:24:13.913Z",
+  "EscrowLoan": {
+    "address": "0x26129493f5095445a2a27F1b358504eCD87Cb710",
+    "network": "sepolia",
+    "blockNumber": 9529487
+  },
+  "KrishiToken_Fixed": true
+}
