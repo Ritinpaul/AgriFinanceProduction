@@ -12,8 +12,8 @@
     <!-- Security headers via meta (best-effort for SPA hosting); add real headers at CDN/server when possible -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-    <!-- Basic CSP: allow self, Railway backend, and HTTPS/WSS connections -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://localhost:3001 https://agrifinance-1.onrender.com https: wss:; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; frame-ancestors 'none'; base-uri 'self';" />
+    <!-- Basic CSP: allow self, Railway backend, and HTTPS/WSS/WS connections for dev -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' http://localhost:3001 https://agrifinance-1.onrender.com https: wss: ws:; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; base-uri 'self';" />
   </head>
   <body>
     <div id="root"></div>

@@ -63,7 +63,7 @@ app.use('/api', apiLimits.general);
 let pool;
 try {
   pool = new Pool({
-    connectionString: process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/agrifinance',
+    connectionString: process.env.Database || process.env.DATABASE_URL || 'postgresql://postgres:password@localhost:5432/agrifinance',
     ssl: {
       rejectUnauthorized: false
     }

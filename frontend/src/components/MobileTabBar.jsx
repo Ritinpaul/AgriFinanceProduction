@@ -13,7 +13,7 @@ export default function MobileTabBar() {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <nav className="fixed bottom-0 inset-x-0 z-40 bg-gray-900 border-t border-gray-700 sm:hidden">
+    <nav className="fixed bottom-0 inset-x-0 z-40 sm:hidden" style={{ background: 'rgba(13, 31, 23, 0.9)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderTop: '1px solid rgba(82, 183, 136, 0.1)' }}>
       <div className="grid grid-cols-5">
         {tabs.map(t => {
           const active = location.pathname === t.path;
@@ -21,8 +21,9 @@ export default function MobileTabBar() {
             <button
               key={t.path}
               onClick={() => navigate(t.path)}
-              className={`py-2 text-xs ${active ? 'text-green-400' : 'text-gray-300'}`}
+              className={`py-3 text-xs font-medium transition-colors ${active ? 'text-agri-leaf' : 'text-gray-400 hover:text-gray-300'}`}
             >
+              {active && <div className="w-1 h-1 rounded-full bg-agri-leaf mx-auto mb-1"></div>}
               {t.label}
             </button>
           );
@@ -31,5 +32,3 @@ export default function MobileTabBar() {
     </nav>
   );
 }
-
-
