@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import MobileTabBar from './components/MobileTabBar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
+import LandingPage from './pages/LandingPage';
 import Services from './pages/Services';
 import SmartTools from './pages/SmartTools';
 import FarmerDashboard from './pages/FarmerDashboard';
@@ -55,9 +56,9 @@ const AppContent = () => {
   // Show loading spinner while checking authentication
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-agri-sand dark:bg-agri-dark flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-agri-leaf mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>
@@ -67,11 +68,12 @@ const AppContent = () => {
   return (
     <>
       <Router>
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div className="min-h-screen bg-agri-sand dark:bg-agri-dark transition-colors duration-300">
           <Navbar />
           <main className="container mx-auto px-4 py-6 pb-24 sm:pb-6">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/admin-signup" element={<AdminSignUp />} />

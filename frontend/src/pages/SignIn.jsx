@@ -40,11 +40,11 @@ const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen hero-section flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-md w-full space-y-8">
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
+        <div className="glass-card p-8 border border-agri-leaf/10">
           <div className="text-center">
-            <div className="mx-auto h-12 w-12 bg-green-600 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto h-12 w-12 bg-gradient-to-br from-agri-forest to-agri-leaf rounded-full flex items-center justify-center mb-4 shadow-glow-green">
               <span className="text-white text-xl">🌾</span>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -67,7 +67,7 @@ const SignIn = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-agri-leaf/20 dark:border-agri-forest/50 rounded-xl bg-white/80 dark:bg-agri-deep/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-agri-leaf/50 focus:border-agri-leaf transition-all duration-200 backdrop-blur-sm"
                   placeholder="Enter your email"
                   value={form.email}
                   onChange={handleChange}
@@ -85,7 +85,7 @@ const SignIn = () => {
                     type={showPassword ? "text" : "password"}
                     autoComplete="current-password"
                     required
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 pr-12 border border-agri-leaf/20 dark:border-agri-forest/50 rounded-xl bg-white/80 dark:bg-agri-deep/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-agri-leaf/50 focus:border-agri-leaf transition-all duration-200 backdrop-blur-sm"
                     placeholder="Enter your password"
                     value={form.password}
                     onChange={handleChange}
@@ -113,7 +113,7 @@ const SignIn = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 shadow-sm hover:shadow-md disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-agri-forest to-agri-green hover:from-agri-deep hover:to-agri-forest disabled:from-gray-400 disabled:to-gray-400 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:transform-none"
             >
               {loading ? (
                 <div className="flex items-center justify-center">
@@ -131,7 +131,7 @@ const SignIn = () => {
               Don't have an account?{' '}
               <Link
                 to="/signup"
-                className="font-semibold text-green-600 hover:text-green-500 dark:text-green-400 dark:hover:text-green-300 transition-colors duration-200"
+                className="font-semibold text-agri-forest hover:text-agri-green dark:text-agri-leaf dark:hover:text-agri-mint transition-colors duration-200"
               >
                 Sign up here
               </Link>

@@ -143,12 +143,12 @@ const FinanceDropdown = () => {
     <div className="relative shrink-0 z-50" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`nav-link flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-200 ${isFinanceActive()
-            ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 font-semibold'
-            : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+        className={`nav-link flex items-center space-x-1 px-3 py-2 rounded-xl transition-all duration-200 ${isFinanceActive()
+            ? 'bg-agri-leaf/15 dark:bg-agri-leaf/10 text-agri-forest dark:text-agri-leaf font-semibold'
+            : 'hover:bg-agri-leaf/8 dark:hover:bg-agri-leaf/5 text-gray-600 dark:text-gray-300'
           }`}
       >
-        <span className="text-sm font-medium">Finance</span>
+        <span className="text-xs font-medium">Finance</span>
         <ChevronDownIcon
           className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
             }`}
@@ -157,10 +157,10 @@ const FinanceDropdown = () => {
 
       {isOpen && (
         <div
-          className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 overflow-hidden max-h-[600px] overflow-y-auto"
+          className="absolute top-full left-0 mt-2 w-80 rounded-2xl shadow-2xl z-50 overflow-hidden max-h-[600px] overflow-y-auto animate-scale-in bg-white dark:bg-[#1a2e23] border border-gray-200 dark:border-agri-leaf/15"
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 dark:from-green-700 dark:to-blue-700 p-4 text-white sticky top-0 z-10">
+          <div className="bg-gradient-to-r from-agri-forest to-agri-leaf dark:from-agri-deep dark:to-agri-forest p-4 text-white sticky top-0 z-10">
             <h3 className="text-sm font-bold mb-1">Finance</h3>
             <p className="text-xs text-white/90">
               Manage your financial activities
@@ -178,10 +178,10 @@ const FinanceDropdown = () => {
                   key={item.path}
                   onClick={() => handleItemClick(item.path, item.requiresAuth, item.roles)}
                   disabled={item.requiresAuth && !hasAccess}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 mb-1 group ${active
-                      ? 'bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-400'
+                  className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 mb-1 group ${active
+                      ? 'bg-agri-leaf/15 dark:bg-agri-leaf/10 border-l-4 border-agri-leaf'
                       : hasAccess
-                        ? 'hover:bg-gray-50 dark:hover:bg-gray-700'
+                        ? 'hover:bg-agri-leaf/8 dark:hover:bg-agri-leaf/5'
                         : 'opacity-60 cursor-not-allowed'
                     }`}
                 >
@@ -215,7 +215,7 @@ const FinanceDropdown = () => {
                           </span>
                         )}
                         {active && (
-                          <span className="text-green-600 dark:text-green-400">
+                          <span className="text-agri-leaf dark:text-agri-leaf">
                             <svg
                               className="w-4 h-4"
                               fill="currentColor"
@@ -232,7 +232,7 @@ const FinanceDropdown = () => {
                       </div>
                       <p
                         className={`text-xs mt-1 ${active
-                            ? 'text-green-600 dark:text-green-400'
+                            ? 'text-agri-forest dark:text-agri-leaf'
                             : hasAccess
                               ? 'text-gray-600 dark:text-gray-400'
                               : 'text-gray-500 dark:text-gray-400'
@@ -249,7 +249,7 @@ const FinanceDropdown = () => {
 
           {/* Footer */}
           {!user && (
-            <div className="border-t border-gray-200 dark:border-gray-700 p-3 bg-gray-50 dark:bg-gray-900/50 sticky bottom-0">
+            <div className="border-t border-agri-leaf/10 dark:border-agri-leaf/5 p-3 bg-agri-leaf/5 dark:bg-agri-dark/50 sticky bottom-0">
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-2 text-center">
                 Sign in to access all financial features
               </p>
@@ -257,14 +257,14 @@ const FinanceDropdown = () => {
                 <Link
                   to="/signin"
                   onClick={() => setIsOpen(false)}
-                  className="flex-1 text-center text-xs font-semibold py-2 px-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                  className="flex-1 text-center text-xs font-semibold py-2 px-3 bg-gradient-to-r from-agri-forest to-agri-green hover:from-agri-deep hover:to-agri-forest text-white rounded-xl transition-all duration-200"
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
                   onClick={() => setIsOpen(false)}
-                  className="flex-1 text-center text-xs font-semibold py-2 px-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 rounded-lg transition-colors"
+                  className="flex-1 text-center text-xs font-semibold py-2 px-3 bg-agri-leaf/15 dark:bg-agri-leaf/10 hover:bg-agri-leaf/25 text-agri-forest dark:text-agri-leaf rounded-xl transition-all duration-200"
                 >
                   Sign Up
                 </Link>

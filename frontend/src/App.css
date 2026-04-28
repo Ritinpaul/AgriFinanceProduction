@@ -1,210 +1,129 @@
-/* Custom styles for AgriFinance */
+/* Custom styles for AgriFinance — Premium Theme */
+
+/* ===== Core Gradient ===== */
 .agri-gradient {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #52b788 100%);
 }
 
-/* Services Dropdown Styles */
+/* ===== Services Dropdown ===== */
 .services-dropdown {
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(82, 183, 136, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px -12px rgba(13, 31, 23, 0.2);
+}
+
+.dark .services-dropdown {
+  background: rgba(13, 31, 23, 0.9);
+  border: 1px solid rgba(82, 183, 136, 0.12);
 }
 
 .services-dropdown-item {
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
 }
 
 .services-dropdown-item:hover {
   transform: translateX(4px);
+  background: rgba(82, 183, 136, 0.08);
 }
 
 .services-dropdown-item.active {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
-  border-left: 3px solid #22c55e;
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.1) 0%, rgba(82, 183, 136, 0.1) 100%);
+  border-left: 3px solid #52b788;
 }
 
+/* ===== Cards ===== */
 .agri-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(13, 31, 23, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark .agri-card {
-  background: #374151;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  background: rgba(26, 58, 42, 0.6);
+  border: 1px solid rgba(82, 183, 136, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
+.agri-card:hover {
+  box-shadow: 0 20px 48px rgba(13, 31, 23, 0.14);
+  transform: translateY(-3px);
+}
+
+.dark .agri-card:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  border-color: rgba(82, 183, 136, 0.25);
+}
+
+/* ===== Stats Card ===== */
 .stats-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
   padding: 1.5rem;
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 3px solid #52b788;
+  box-shadow: 0 8px 32px rgba(13, 31, 23, 0.08);
+  transition: all 0.3s ease;
 }
 
 .dark .stats-card {
-  background: #374151;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  background: rgba(26, 58, 42, 0.5);
+  border: 1px solid rgba(82, 183, 136, 0.12);
+  border-left: 3px solid #52b788;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== Form Styles ===== */
 .form-label {
   display: block;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #374151;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.375rem;
+  letter-spacing: 0.01em;
 }
 
 .dark .form-label {
-  color: #d1d5db;
+  color: #95d5b2;
 }
 
 .form-input {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  border-radius: 12px;
   font-size: 0.875rem;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #111827;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: all 0.25s ease;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15), 0 4px 12px rgba(82, 183, 136, 0.1);
 }
 
 .dark .form-input {
-  background-color: #374151;
-  border-color: #4b5563;
+  background: rgba(26, 58, 42, 0.5);
+  border-color: rgba(82, 183, 136, 0.2);
   color: #f9fafb;
 }
 
 .dark .form-input:focus {
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
-}
-
-.agri-card:hover {
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.agri-button {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.agri-button:hover {
-  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-  transform: translateY(-1px);
-}
-
-.agri-button:disabled {
-  background: #9ca3af;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.status-pending {
-  background-color: #fbbf24;
-  color: white;
-}
-
-.status-active {
-  background-color: #22c55e;
-  color: white;
-}
-
-.status-repaid {
-  background-color: #3b82f6;
-  color: white;
-}
-
-.status-defaulted {
-  background-color: #ef4444;
-  color: white;
-}
-
-.status-created {
-  background-color: #6b7280;
-  color: white;
-}
-
-.status-verified {
-  background-color: #22c55e;
-  color: white;
-}
-
-.status-sold {
-  background-color: #3b82f6;
-  color: white;
-}
-
-/* Loading spinner */
-.loading-spinner {
-  border: 4px solid #f3f4f6;
-  border-top: 4px solid #22c55e;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* QR Code styles */
-.qr-code-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  border: 2px dashed #d1d5db;
-}
-
-/* Chart container */
-.chart-container {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* Form styles */
-.form-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #374151;
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.2), 0 4px 12px rgba(82, 183, 136, 0.1);
 }
 
 .form-error {
@@ -213,42 +132,191 @@
   margin-top: 4px;
 }
 
-/* Dashboard grid */
+/* ===== Buttons ===== */
+.agri-button {
+  background: linear-gradient(135deg, #2d6a4f 0%, #40916c 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.25);
+}
+
+.agri-button:hover {
+  background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.35);
+}
+
+.agri-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== Status Badges ===== */
+.status-pending {
+  background-color: rgba(251, 191, 36, 0.15);
+  color: #d97706;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.dark .status-pending {
+  background-color: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+}
+
+.status-active {
+  background-color: rgba(82, 183, 136, 0.15);
+  color: #2d6a4f;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.dark .status-active {
+  background-color: rgba(82, 183, 136, 0.1);
+  color: #74c69d;
+}
+
+.status-repaid {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark .status-repaid {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+.status-defaulted {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.dark .status-defaulted {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+}
+
+.status-created {
+  background-color: rgba(107, 114, 128, 0.15);
+  color: #4b5563;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.dark .status-created {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: #9ca3af;
+}
+
+.status-verified {
+  background-color: rgba(82, 183, 136, 0.15);
+  color: #2d6a4f;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.dark .status-verified {
+  background-color: rgba(82, 183, 136, 0.1);
+  color: #74c69d;
+}
+
+.status-sold {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.dark .status-sold {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+/* ===== Loading Spinner ===== */
+.loading-spinner {
+  border: 3px solid rgba(82, 183, 136, 0.2);
+  border-top: 3px solid #52b788;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== QR Code ===== */
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 2px dashed rgba(82, 183, 136, 0.3);
+}
+
+/* ===== Chart Container ===== */
+.chart-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(13, 31, 23, 0.08);
+}
+
+.dark .chart-container {
+  background: rgba(26, 58, 42, 0.5);
+  border: 1px solid rgba(82, 183, 136, 0.12);
+}
+
+/* ===== Stats Numbers ===== */
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.dark .stats-number {
+  background: linear-gradient(135deg, #74c69d, #95d5b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stats-label {
+  color: #6b7280;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+/* ===== Dashboard Grid ===== */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
 }
 
-/* Stats card */
-.stats-card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #22c55e;
-}
-
-.stats-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #22c55e;
-  margin-bottom: 8px;
-}
-
-.stats-label {
-  color: #6b7280;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Responsive design */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .stats-number {
     font-size: 2rem;
   }
